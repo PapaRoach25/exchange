@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" ng-app = "mainApp">
+<head>
+  <meta charset="UTF-8">
+  <title>exchange</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"  crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body ng-controller = "mainCtrl">
+
+<section class="exchangeBlock container-fluid">
+	<div class="container">
+		<div class="containerForLabel col-lg-12 col-xl-12 col-md-12 col-sm-12 col-12">
+			<h2>Select currency to Exchange:</h2>
+			<select id="select">
+  				<option value="USD">USD</option>
+ 				<option value="EUR">EUR</option>
+ 				<option value="RUB">RUB</option>
+ 				<option value="GBP">GBP</option>
+			</select>
+		</div>
+		
+		<div class="row">
+			<div class="col-lg-4 col-xl-4 col-md-6 col-sm-12 p-bottom col ">
+				<div class="cont_four ethereum">
+					<h5>Ethercoin</h5>
+					<div >
+						<h6>Price: <span>{{Eth.data.last}}</span></h6>
+						<p class="first">Percent change
+<label class="switch">
+  <input type="checkbox" ng-model = "isChecked1" ng-change="change()">
+  <span class="slider round"></span>
+</label></p>
+						<p>Hour change<span>{{eth.hour}}</span></p>
+						<p>Day change<span>{{eth.day}}</span></p>
+						<p>Week change<span>{{eth.week}}</span></p>
+						<p>Month change<span>{{eth.month}}</span></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-xl-4 col-md-6 col-sm-12 p-bottom col ">
+				<div class="cont_four litecoin">
+					<h5>Litecoin</h5>
+					<div >
+						<h6>Price:<span>{{Ltc.data.last}}</span></h6>
+						<p class="first">Percent change
+<label class="switch">
+  <input type="checkbox" ng-model = "isChecked2" ng-change="change()">
+  <span class="slider round"></span>
+</label></p>
+						<p>Hour change<span>{{ltc.hour}}</span></p>
+						<p>Day change<span>{{ltc.day}}</span></p>
+						<p>Week change<span>{{ltc.week}}</span></p>
+						<p>Month change<span>{{ltc.month}}</span></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-xl-4 col-md-6 col-sm-12 p-bottom
+			col ">
+				<div class="cont_four bitcoin">
+					<h5>Bitcoin</h5>
+					<div >
+						<h6>Price:<span>{{Btc.data.last}}</span></h6>
+						<p class="first">Percent change
+<label class="switch">
+  <input type="checkbox" ng-model = "isChecked3" ng-change="change()">
+  <span class="slider round"></span>
+</label></p>
+						<p>Hour change<span>{{btc.hour}}</span></p>
+						<p>Day change<span>{{btc.day}}</span></p>
+						<p>Week change<span>{{btc.week}}</span></p>
+						<p>Month change<span>{{btc.month}}</span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>  
+<script src="assets/js/app.js"></script>
+<script src="assets/js/controllers/mainCtrl.js"></script>
+</body>
+</html>
